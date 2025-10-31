@@ -2,6 +2,8 @@
 
 Komik ve yaratıcı bir çıkma teklifi web sitesi.
 
+🌐 **Live Demo:** https://whyyoushoulddateme.vercel.app
+
 ## 🎯 Özellikler
 
 - 📰 Haber sitesi parodisi
