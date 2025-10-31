@@ -1,0 +1,97 @@
+/* Neden Ben Sayfası Stilleri */
+
+body {
+    background: #fff;
+    color: #000;
+    font-family: 'Times New Roman', serif;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 3px solid #000;
+    padding: 30px;
+}
+
+.main-question {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.instruction {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.reasons {
+    margin-bottom: 30px;
+}
+
+.reason-box {
+    border: 2px solid #000;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: #f0f0f0;
+    display: none;
+}
+
+.reason-box.visible {
+    display: block;
+}
+
+.reason-box strong {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.continue-btn {
+    display: none;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border: 3px solid #000;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Times New Roman', serif;
+}
+
+.continue-btn.visible {
+    display: block;
+}
+
+.continue-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .main-question {
+        font-size: 24px;
+    }
+
+    .reason-box {
+        padding: 15px;
+    }
+
+    .reason-box strong {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,172 @@
+/* İş İlanı Sayfası Stilleri */
+
+body {
+    background: #f8f8f8;
+    font-family: Arial, sans-serif;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.urgent-tag {
+    background: #ff0000;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.job-title {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.company {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 8px;
+}
+
+.detail-row {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-label {
+    font-weight: bold;
+    min-width: 150px;
+}
+
+.detail-value {
+    color: #333;
+}
+
+.requirements {
+    list-style: none;
+    padding: 0;
+}
+
+.requirements li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.requirements li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.accept-btn {
+    flex: 1;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.accept-btn:hover {
+    background: #218838;
+}
+
+.reject-btn {
+    flex: 1;
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.1s;
+}
+
+.success-message {
+    display: none;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.success-message h3 {
+    color: #155724;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.heart {
+    position: fixed;
+    font-size: 30px;
+    animation: fall 3s linear forwards;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    .job-title {
+        font-size: 28px;
+    }
+
+    .detail-row {
+        flex-direction: column;
+    }
+
+    .detail-label {
+        margin-bottom: 5px;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+}

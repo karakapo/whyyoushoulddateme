@@ -1,0 +1,154 @@
+/* Ortak Global Stiller */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+/* Genel Section Stilleri */
+.section {
+    display: none;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Genel Haber Stilleri (index.html için) */
+.breaking-bar {
+    background: #c8102e;
+    color: white;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.breaking-bar span {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background: #f5f5f5;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.main-news {
+    background: white;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.news-category {
+    color: #c8102e;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: inline-block;
+    border-bottom: 2px solid #c8102e;
+    padding-bottom: 5px;
+}
+
+.main-headline {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.news-meta {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.news-summary {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    background: #c8102e;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.read-more:hover {
+    background: #a00;
+}
+
+.sidebar {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #c8102e;
+}
+
+.side-news-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+}
+
+.side-news-item:last-child {
+    border-bottom: none;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-headline {
+        font-size: 24px;
+    }
+
+    .news-summary {
+        font-size: 14px;
+    }
+
+    .sidebar {
+        margin-top: 20px;
+    }
+
+    .main-news {
+        padding: 20px;
+    }
+}

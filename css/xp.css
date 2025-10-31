@@ -1,0 +1,93 @@
+/* Windows XP Yükleme Ekranı Stilleri */
+
+#section2 {
+    background: linear-gradient(to bottom, #245edb 0%, #3f8cf3 50%, #245edb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.xp-screen {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.xp-logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.xp-logo-microsoft {
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-size: 28px;
+    color: white;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+.xp-logo-windows {
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-size: 52px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: -5px;
+}
+
+.xp-loading-text {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 40px;
+    font-family: 'Tahoma', Arial, sans-serif;
+}
+
+.xp-loading-bar {
+    background: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    max-width: 300px;
+    height: 12px;
+    margin: 0 auto;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.xp-loading-fill {
+    background: linear-gradient(to right, #0c59d8 0%, #4fa3ff 50%, #0c59d8 100%);
+    height: 100%;
+    width: 0%;
+    transition: width 3s linear;
+    animation: shimmer 1.5s infinite;
+}
+
+.xp-loading-fill.active {
+    width: 100%;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -300px 0;
+    }
+    100% {
+        background-position: 300px 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .xp-logo-microsoft {
+        font-size: 22px;
+    }
+
+    .xp-logo-windows {
+        font-size: 42px;
+    }
+
+    .xp-loading-bar {
+        max-width: 250px;
+    }
+}
